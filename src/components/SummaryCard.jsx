@@ -1,24 +1,47 @@
 import React from "react";
 
 const SummaryCard = ({ title, value }) => {
-
-  const getColor = () => {
-    if (title.toLowerCase().includes("income")) return "text-green-600";
-    if (title.toLowerCase().includes("expense")) return "text-red-600";
-    return "text-blue-600"; // balance
+  const getStyles = () => {
+    if (title.toLowerCase().includes("income")) {
+      return {
+        text: "text-green-600",
+        bg: "bg-green-100",
+      };
+    }
+    if (title.toLowerCase().includes("expense")) {
+      return {
+        text: "text-red-600",
+        bg: "bg-red-100",
+      };
+    }
+    return {
+      text: "text-blue-600",
+      bg: "bg-blue-100",
+    };
   };
 
-  return (
-    <div className="bg-white shadow-md rounded-2xl p-5 transition hover:shadow-lg">
-      {/* Title */}
-      <h3 className="text-sm text-gray-500 font-medium mb-2">
-        {title}
-      </h3>
+  const styles = getStyles();
 
-      {/* Value */}
-      <p className={`text-2xl font-bold ${getColor()}`}>
-        ₹ {value.toLocaleString()}
-      </p>
+  return (
+    <div className="bg-white border rounded-2xl p-5 shadow-sm hover:shadow-md transition duration-200 flex items-center justify-between">
+      
+      {/* Left Side */}
+      <div>
+        <h3 className="text-sm text-gray-500 font-medium">
+          {title}
+        </h3>
+        <p className={`text-2xl font-bold mt-1 ${styles.text}`}>
+          ₹ {value.toLocaleString()}
+        </p>
+      </div>
+
+      {/* Right Side Icon Circle */}
+      <div className={`w-12 h-12 flex items-center justify-center rounded-full ${styles.bg}`}>
+        <span className="text-lg font-bold">
+          ₹
+        </span>
+      </div>
+
     </div>
   );
 };
