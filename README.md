@@ -10,7 +10,7 @@ The application focuses on **frontend design, state management, and user experie
 
 ## 🚀 Live Demo
 
-👉 https://your-vercel-link.vercel.app
+👉 https://finance-dashboard-iota-six.vercel.app/
 
 ---
 
