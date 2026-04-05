@@ -20,7 +20,7 @@ export const PieChartComponent = ({ data }) => {
   return (
     <div className="bg-white p-5 rounded-2xl shadow-sm border h-[350px]">
       
-      <h2 className="text-lg font-semibold mb-4 text-gray-800">
+      <h2 className="text-lg font-semibold mb-4 text-gray-900">
         Spending Breakdown
       </h2>
 
