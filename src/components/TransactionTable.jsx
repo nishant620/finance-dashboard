@@ -47,7 +47,7 @@ const TransactionTable = () => {
                   className="border-b hover:bg-gray-50 transition"
                 >
                   <td className="py-3">{t.date}</td>
-                  <td className="py-3 font-medium text-gray-700">
+                  <td className="py-3 font-medium text-gray-600">
                     {t.category}
                   </td>
                   <td className="py-3 font-semibold">
