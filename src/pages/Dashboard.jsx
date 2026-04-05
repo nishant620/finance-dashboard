@@ -83,7 +83,7 @@ const Dashboard = () => {
       </div>
 
       {/* ================= ADMIN SECTION ================= */}
-{role === "admin" && (
+{role==="admin" && (
   <div className="bg-blue-50 border border-blue-200 p-5 rounded-2xl flex justify-between items-center">
     
     {/* Left Text */}
